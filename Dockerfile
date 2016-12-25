@@ -34,8 +34,7 @@ RUN make install
 RUN ldconfig
 
 WORKDIR /opt/mxe
-RUN make gcc boost cmake openssl wxwidgets
-RUN make portaudio
+RUN make gcc boost cmake openssl wxwidgets bfd gendef geoip-database glfw3 sqlite yasm rubberband portaudio portmidi assimp cairo
 
 CMD ["/bin/bash"]
 
