@@ -1,4 +1,4 @@
-FROM tm604/docker-mxe-build:latest
+FROM tm604/mxe-build:latest
 MAINTAINER Tom Molesworth "tom@audioboundary.com"
 ENV REFRESHED_AT 2016-12-26
 WORKDIR /opt
@@ -30,7 +30,7 @@ RUN make install
 RUN ldconfig
 
 WORKDIR /opt/mxe
-RUN make gcc boost cmake openssl wxwidgets bfd gendef geoip-database glfw3 sqlite yasm rubberband portaudio portmidi assimp cairo
+RUN make gcc boost cmake openssl bfd gendef geoip-database sqlite
 
 CMD ["/bin/bash"]
 
