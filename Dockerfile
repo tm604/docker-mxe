@@ -30,7 +30,10 @@ RUN make install
 RUN ldconfig
 
 WORKDIR /opt/mxe
-RUN make gcc boost cmake openssl bfd gendef geoip-database sqlite
+RUN make binutils
+RUN make gcc
+RUN make bfd gendef
+RUN make boost cmake openssl geoip-database sqlite
 
 CMD ["/bin/bash"]
 
